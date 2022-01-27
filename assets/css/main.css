@@ -618,6 +618,11 @@ input, select, textarea {
 		margin-bottom: 1em;
 	}
 
+	.logo{
+		max-width: 120px;
+		margin-left: 2rem;
+	}
+
 /* Box */
 
 	.box {
@@ -1827,15 +1832,14 @@ input, select, textarea {
 /* Header */
 
 	#header {
-		position: fixed;
+		position: absolute;
 		z-index: 10000;
 		left: 0;
 		top: 0;
 		width: 100%;
-		background: rgba(255, 255, 255, 0.95);
+		background: transparent;
 		height: 3em;
 		line-height: 3em;
-		box-shadow: 0 0 0.15em 0 rgba(0, 0, 0, 0.1);
 	}
 
 		#header h1 {
@@ -1877,6 +1881,7 @@ input, select, textarea {
 						line-height: 3em;
 						padding: 0 0.5em 0 0.5em;
 						outline: 0;
+						font-weight: bold;
 					}
 
 		@media screen and (max-width: 736px) {
@@ -1904,10 +1909,6 @@ input, select, textarea {
 				}
 
 		}
-
-	body {
-		padding-top: 3em;
-	}
 
 		@media screen and (max-width: 736px) {
 
@@ -2244,26 +2245,26 @@ input, select, textarea {
 /* Intro */
 
 	#intro {
-		background: url("images/overlay.png"), url("../../images/intro.jpg");
-		background-size: 256px 256px, cover;
-		background-attachment: fixed, fixed;
-		background-position: top left, bottom center;
-		background-repeat: repeat, no-repeat;
+		background: url("../../images/floral-bg.png"), #ecd1d1;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		padding-top: 11rem;
 	}
 
 /* One */
 
 	#one {
-		background: url("images/overlay.png"), url("../../images/one.jpg");
-		background-size: 256px 256px, cover;
-		background-attachment: fixed, fixed;
-		background-position: top left, center center;
+		background: url("../../images/wreath_on_door.jpg");
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: center;
 	}
 
 /* Two */
 
 	#two {
-		background: url("images/overlay.png"), url("../../images/two.jpg");
+		background:#ecd1d1;
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
