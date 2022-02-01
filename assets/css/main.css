@@ -667,10 +667,10 @@ input, select, textarea {
 		-webkit-transition: background-color 0.2s ease-in-out;
 		-ms-transition: background-color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out;
-		background-color: #98c593;
+		background-color: #ecd1d1;
 		border: 0;
 		border-radius: 3.5em;
-		color: #ffffff;
+		color: #121212;
 		cursor: pointer;
 		display: inline-block;
 		height: 3.5em;
@@ -1910,12 +1910,69 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 736px) {
+/* Testimonials */
 
-			body {
-				padding-top: 2.5em;
-			}
+		#testimonials {
+			width: 100%;
+			min-height: 30rem;
+			background: url('../../images/corner-flower.png'), #ecd1d1;
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: left;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: start;
+			position: relative;
+		}
 
+		#testimonials h3 {
+			justify-self: self-start;
+			font-size: 2.25em;
+			margin: 3rem 0 1rem;
+		}
+
+		#testimonials p {
+			font-size: 1.2em;
+			margin: 0 0 2rem 0;
+		}
+
+		#testimonials .slider-wrapper {
+			position: relative;
+			height: 100%;
+			width: 100%;
+		}
+
+		#testimonials .slider-wrapper .slide {
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			height: 100%;
+			width: 70%;
+			margin: 0 auto;
+			opacity: 0;
+			transition: opacity 2s ease-in-out;
+			padding: 0 70px;
+		}
+
+		#testimonials .slider-wrapper .slide.active {
+			opacity: 1;
+			transition-delay: .8s;
+		}
+
+		#testimonials .slider-wrapper .slide .content {
+			color: #121212;
+			text-align: center;
+			font-size: 1.8em;
+			line-height: 1.6;
+		}
+
+		#testimonials .slider-wrapper .slide .reviewer {
+			font-style: italic;
+			font-size: 1.8rem;
+			margin-top: 3rem;
 		}
 
 /* Main */
@@ -2101,6 +2158,47 @@ input, select, textarea {
 				width: 60%;
 			}
 
+			#testimonials {
+				min-height: 100vh;
+			}
+
+			#testimonials .overlay {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				background-color: rgba(236, 209, 209, 0.6);
+			}
+
+			#testimonials h3 {
+				font-size: 2.25em;
+				z-index: 2;
+			}
+
+			#testimonials p {
+				font-size: 1.5rem;
+				z-index: 2;
+			}
+
+			#testimonials .slider-wrapper .slide {
+				width: 100%;
+			}
+
+			#testimonials .slider-wrapper .slide .content {
+				width: 100%;
+			}
+
+			#testimonials .slider-wrapper .slide .content .review {
+				width: 100%;
+				font-size: 1.6rem;
+			}
+
+			#testimonials .slider-wrapper .slide .content .reviewer {
+				width: 100%;
+				font-size: 1.4rem;
+			}
+
 		}
 
 		@media screen and (max-width: 736px) {
@@ -2150,10 +2248,28 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 480px) {
+		@media screen and (max-width: 500px) {
 
 			.main > .content {
 				max-width: calc(100% - 1.5em);
+			}
+
+			#testimonials .overlay {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				background-color: rgba(236, 209, 209, 0.6);
+			}
+
+			#testimonials h3 {
+				margin: 2rem 0 1rem;
+				z-index: 2;
+			}
+
+			#testimonials p {
+				z-index: 2
 			}
 
 		}
@@ -2177,8 +2293,8 @@ input, select, textarea {
 		margin: 0;
 		line-height: 1em;
 		padding: 1.5em;
-		background: #39454b;
-		color: rgba(185, 186, 187, 0.5);
+		background: #e6b5b5;
+		color: #121212;
 		overflow: hidden;
 	}
 
