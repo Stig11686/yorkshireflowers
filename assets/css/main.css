@@ -2480,3 +2480,62 @@ input, select, textarea {
 
 		}
 
+/* Services */
+
+#services {
+	padding: 4rem 0;
+}
+
+#services h2 {
+	text-align: center;
+}
+
+#services .services {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 80%;
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+#services .services-box {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid #e6b5b5;
+	margin: 0 10px;
+	width: 40%;
+	align-self: stretch;
+	padding: 15px;
+	border-radius: 6px;
+	box-shadow: 5px 2px 15px rgba(0,0,0,0.3);
+
+}
+
+#services .services-box img {
+	object-fit: cover;
+	width: 100%;
+	max-height: 300px;
+}
+
+#services .services-box h3 {
+	text-align: center;
+}
+
+#services .services-box a {
+	color: #121212;
+	background: #e6b5b5;
+	text-decoration: none;
+	padding: 13px;
+	border-radius: 3.5em;
+	cursor: pointer;
+	text-align: center;
+}
+
+@media screen and (max-width: 736px) {
+	#services .services-box {
+		width: 100%;
+		margin: 15px 0;
+	}
+}
