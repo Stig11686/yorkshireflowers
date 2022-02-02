@@ -1933,6 +1933,7 @@ input, select, textarea {
 					transition: width 0.6s ease-in-out;
 					z-index: 35;
 				}
+
 		}
 
 /* Testimonials */
@@ -1960,6 +1961,7 @@ input, select, textarea {
 		#testimonials p {
 			font-size: 1.2em;
 			margin: 0 0 2rem 0;
+			text-align: center;
 		}
 
 		#testimonials .slider-wrapper {
