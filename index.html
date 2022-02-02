@@ -21,7 +21,6 @@
 			<header id="header">
 				<img src="images/logo.png" alt="logo" class="logo" />
 				<nav>
-					<div class="close">X</div>
 					<ul>
 						<li><a href="#intro">Intro</a></li>
 						<li><a href="#one">What I Do</a></li>
@@ -32,9 +31,7 @@
 					</ul>
 				</nav>
 				<div class="navbar-toggle">
-					<span class="hamburger"></span>
-					<span class="hamburger"></span>
-					<span class="hamburger"></span>
+					<a href="https://www.etsy.com/uk/shop/TheYorkshireFloralCo/" target="_blank">My Shop</a>
 				</div>
 			</header>
 
@@ -145,7 +142,7 @@
 				<div class="slide">
 					<div class="content">
 						<div class="review">
-							“We can’t thank you enough, it actually makes the bar, everyone love it”						</div>
+							“We can’t thank you enough, it actually makes the bar, everyone loves it!”						</div>
 						<div class="reviewer">
 							Bronte bar co
 						</div>
@@ -171,7 +168,7 @@
 						<p>I'm always happy to take bookings and enquiries for work, simply fill in the form below and I'll be in touch within one working day</p>
 					</header>
 					<div class="box">
-						<form method="post" action="#">
+						<form method="post" action="form-to-email.php">
 							<div class="fields">
 								<div class="field half"><input type="text" name="name" placeholder="Name" /></div>
 								<div class="field half"><input type="email" name="email" placeholder="Email" /></div>
@@ -190,8 +187,8 @@
 
 				<!-- Icons -->
 					<ul class="icons">
-						<li><a href="https://m.facebook.com/theyorkshirefloralco/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="https://www.instagram.com/theyorkshirefloralco/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="https://m.facebook.com/theyorkshirefloralco/" class="icon"><img src="./images/facebook_icon.svg" alt="Facebook logo"><span class="label">Facebook</span></a></li>
+						<li><a href="https://www.instagram.com/theyorkshirefloralco/" class="icon"><img src="./images/instagram_icon.svg" alt="Instagram logo"><span class="label">Instagram</span></a></li>
 					</ul>
 
 				<!-- Menu -->
@@ -232,23 +229,6 @@
 
 				testimonialsSlider()
 
-				function navBarToggle(){
-					const toggler = document.querySelector('.navbar-toggle');
-					const navbar = document.querySelector('#header nav');
-					const close = document.querySelector('#header nav .close');
-
-					toggler.addEventListener('click', e => {
-						e.preventDefault();
-						navbar.classList.toggle('active');
-					})
-
-					close.addEventListener('click', e => {
-						e.preventDefault();
-						navbar.classList.toggle('active');
-					})
-				}
-
-				navBarToggle()
 			</script>
 	</body>
 </html>

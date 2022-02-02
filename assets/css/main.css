@@ -1174,6 +1174,7 @@ input, select, textarea {
 			line-height: 2em;
 			text-align: center;
 			border: 0;
+			color: #121212;
 		}
 
 /* Sections/Article */
@@ -1895,16 +1896,13 @@ input, select, textarea {
 				border: 1px solid #ecd1d1;
 				border-radius: 6px;
 				z-index: 30;
-				padding: 8px 5px 3px 5px;
-				background: #fff;
+				padding: 13px;
+				background: rgba(255, 255, 255, 0.7);
 			}
 
-			#header .navbar-toggle .hamburger {
-				height: 3px;
-				width: 30px;
-				background-color: #ecd1d1;
-				display: block;
-				margin-bottom: 5px;
+			#header .navbar-toggle a {
+				text-decoration: none;
+				color: #121212;
 			}
 
 				#header h1 {
@@ -1935,27 +1933,6 @@ input, select, textarea {
 					transition: width 0.6s ease-in-out;
 					z-index: 35;
 				}
-
-				#header nav.active {
-					width: 80%;
-				}
-
-				#header nav .close {
-					position: absolute;
-					top: 50px;
-					right: 50px;
-					font-size: 50px;
-					font-weight: bold;
-
-
-				}
-
-				#header nav ul {
-					display: flex;
-					flex-direction: column;
-
-				}
-
 		}
 
 /* Testimonials */
@@ -2251,6 +2228,16 @@ input, select, textarea {
 
 		@media screen and (max-width: 736px) {
 
+			#testimonials h3 {
+				font-size: 1.5em;
+				z-index: 2;
+			}
+
+			#testimonials p {
+				font-size: 1.2em;
+				z-index: 2;
+			}
+
 			.main > .content br {
 				display: none;
 			}
@@ -2362,10 +2349,20 @@ input, select, textarea {
 			margin: 0;
 		}
 
-			#footer ul.menu li {
-				border-left-color: rgba(185, 186, 187, 0.2);
-				font-size: 0.9em;
-			}
+		#footer ul.menu li {
+			border-left-color: rgba(185, 186, 187, 0.2);
+			font-size: 0.9em;
+		}
+
+		#footer ul.icons li img {
+			height: 35px;
+			width: 35px;
+			color: lightblue;
+		}
+
+		#footer ul.icons li a {
+			color: lightblue;
+		}
 
 		@media screen and (max-width: 1000px) {
 
