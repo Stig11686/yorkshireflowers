@@ -1836,6 +1836,10 @@ input, select, textarea {
 		line-height: 3em;
 	}
 
+	#header .navbar-toggle {
+		display: none;
+	}
+
 		#header h1 {
 			position: absolute;
 			left: 1em;
