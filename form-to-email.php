@@ -13,7 +13,7 @@ if(isset($_POST['submit'])){
     $headers = "From: $email_from \r\n";
     $headers .= "Reply-To: $email \r\n";
 
-    mail($to,$email_subject,$message,$headers)
+    mail($to,$email_subject,$message,$headers);
 
 
 }
