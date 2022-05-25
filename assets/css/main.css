@@ -495,16 +495,16 @@ input, select, textarea {
 	body, input, textarea, select {
 		font-family: "Montserrat";
 		font-weight: 300;
-		font-size: 18pt;
+		font-size: 18px;
 		line-height: 1.75em;
-		color: #39454b;
+		color: #6D6875;
 		letter-spacing: 0.025em;
 	}
 
 		@media screen and (max-width: 1920px) {
 
 			body, input, textarea, select {
-				font-size: 17pt;
+				font-size: 17px;
 			}
 
 		}
@@ -554,9 +554,9 @@ input, select, textarea {
 		}
 
 	h2 {
-		font-size: 2.25em;
-		line-height: 1.25em;
-		letter-spacing: -0.05em;
+		font-size: 1.5rem;
+		line-height: 1.6;
+		letter-spacing: -0.5px;
 	}
 
 	@media screen and (max-width: 736px) {
@@ -1959,7 +1959,7 @@ input, select, textarea {
 
 		#testimonials h3 {
 			justify-self: self-start;
-			font-size: 2.25em;
+			font-size: 1.4rem;
 			margin: 5rem 0 1rem;
 		}
 
@@ -2204,12 +2204,12 @@ input, select, textarea {
 			}
 
 			#testimonials h3 {
-				font-size: 2.25em;
+				font-size: 1.5rem;
 				z-index: 2;
 			}
 
 			#testimonials p {
-				font-size: 1.5rem;
+				font-size: 1.3rem;
 				z-index: 2;
 			}
 
@@ -2223,7 +2223,7 @@ input, select, textarea {
 
 			#testimonials .slider-wrapper .slide .content .review {
 				width: 100%;
-				font-size: 1.6rem;
+				font-size: 1.5rem;
 			}
 
 			#testimonials .slider-wrapper .slide .content .reviewer {
@@ -2540,4 +2540,8 @@ input, select, textarea {
 		width: 100%;
 		margin: 15px 0;
 	}
+}
+
+.bg-primary {
+	background-color: #ecd1d1!important;
 }
