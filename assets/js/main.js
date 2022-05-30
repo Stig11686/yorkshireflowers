@@ -10,6 +10,19 @@
 		$body = $('body'),
 		$header = $('#header'),
 		$all = $body.add($header);
+		$offScreenNav = $('.off-screen-nav');
+		$navbarToggle = $('.navbar-toggle');
+
+		$navbarToggle.on('click', function(){
+			$offScreenNav.toggleClass('active');
+		})
+
+		$offScreenNav.on('click', function(e){
+			if(!e.target.classList.contains('mobile-nav')) {
+				$offScreenNav.toggleClass('active');
+			}
+		})
+
 
 	// Breakpoints.
 		breakpoints({
