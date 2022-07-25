@@ -15,11 +15,13 @@
 
 		$navbarToggle.on('click', function(){
 			$offScreenNav.toggleClass('active');
+			$body.toggleClass('overflow-hidden');
 		})
 
 		$offScreenNav.on('click', function(e){
 			if(!e.target.classList.contains('mobile-nav')) {
 				$offScreenNav.toggleClass('active');
+				$body.toggleClass('overflow-hidden');
 			}
 		})
 

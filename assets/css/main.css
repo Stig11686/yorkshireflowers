@@ -1822,6 +1822,9 @@ input, select, textarea {
 				}
 
 		}
+		.overflow-hidden {
+			overflow: hidden;
+		}
 
 /* Header */
 
@@ -2465,7 +2468,7 @@ input, select, textarea {
 /* One */
 
 	#one {
-		background: url("../../images/wreath_on_door.jpg");
+		background: url("../../images/wedding-flowers-2.jpg");
 		background-size: cover;
 		background-attachment: fixed;
 		background-position: center;
