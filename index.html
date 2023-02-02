@@ -14,16 +14,53 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+				theme: {
+					minHeight: {
+						'1/2': '50vh'
+					},
+					fontSize: {
+						sm: '0.8rem',
+						base: '1rem',
+						lg: '1.1rem',
+						xl: '1.25rem',
+						'2xl': '1.563rem',
+						'3xl': '1.953rem',
+						'4xl': '2.441rem',
+						'5xl': '3.052rem',
+					},
+					extend: {
+							colors: {
+								pink: '#F1D5D5',
+								grey: {
+									50: '#f2f2f2',
+									100: '#f4f4f4',
+									200: '#dedede',
+									300: '#707070',
+									400: '#cbd5e0',
+									500: '#a0aec0',
+									600: '#718096',
+									700: '#4a5568',
+									800: '#2d3748',
+									900: '#1a202c',
+								},
+							}
+						}
+					}
+			}
+		</script>
 	</head>
 	<body class="is-preload">
 
 		<!-- Header -->
-			<header id="header">
+			<header id="header" class="flex w-full justify-between items-center bg-pink px-4">
 				<a href="./index.html">
-					<img src="images/logo.png" alt="logo" class="logo" />
+					<img src="images/logo.jpg" alt="logo" class="h-20" />
 				</a>
-				<nav>
-					<ul>
+				<nav class="hidden md:block">
+					<ul class="flex w-full space-x-4 font-bold">
 						<li><a href="#intro">Intro</a></li>
 						<li><a href="#one">What I Do</a></li>
 						<li><a href="#two">Who I Am</a></li>
@@ -33,272 +70,247 @@
 						<li><a href="#contact">Contact</a></li>
 					</ul>
 				</nav>
-				<div class="navbar-toggle"><span class="hamburger"></span><span class="hamburger"></span><span class="hamburger"></span></div>
-				<div class="off-screen-nav">
-					<nav class="mobile-nav">
+				<div onclick="toggleNav()" class="navbar-toggle md:hidden flex flex-col justify-around space-y-1 border border-2 border-pink"><span class="h-1 w-10 bg-grey-500 block hamburger"></span><span class="h-1 w-10 bg-grey-500 block hamburger"></span><span class="h-1 w-10 bg-grey-500 block hamburger"></span></div>
+				<div class="mobile-nav absolute h-full w-full bg-grey-700 top-0 right-0 bottom-0 z-50 mr-[-100%] transition-all ease-in-out duration-1000 delay-150">
+					<nav class="flex items-center justify-center text-white flex-col min-h-screen space-y-4 relative md:hidden">
+						<div onclick="toggleNav()" class="closeNav md:hidden absolute top-0 right-0 mt-6 mr-6 p-4 text-white flex items-center justify-center font-bold">X</div>
 						<a href="index.html">Home</a>
-					<a href="hire-items.html">Hire Items</a>
-					<a href="https://www.etsy.com/uk/shop/TheYorkshireFloralCo/" target="_blank">My Shop</a>
+						<a href="hire-items.html">Hire Items</a>
+						<a href="https://www.etsy.com/uk/shop/TheYorkshireFloralCo/" target="_blank">My Shop</a>
 					</nav>
 				</div>
 			</header>
 
-		<!-- Intro -->
-			<section id="intro" class="main style1 dark fullscreen">
-				<div class="content">
-					<header>
-						<h2>Welcome to the Yorkshire Floral Co</h2>
-					</header>
-					<h3>Crafting floral masterpieces for Weddings, Workplaces and Homes</h3>
-					<footer>
-						<a href="#one" class="button style2 down">More</a>
-					</footer>
+			<section class="home-header relative" id="intro" class="py-12">
+			<!-- <div class="absolute top-0 left-0 w-full h-full bg-black opacity-30"></div> -->
+				<div class="content px-6 z-40 border border-1 border-white p-2 rounded">
+					<div class="bg-white opacity-80 p-12 flex items-start justify-center flex-col">
+						<h2 class="text-3xl font-bold text-grey">Welcome to the Yorkshire Floral Co</h2>
+						<h3>The Modern Day Florist</h3>
+						<a href="https://www.etsy.com/uk/shop/TheYorkshireFloralCo/" target="_blank" class="mt-6 border border-2 border-pink text-dark px-6 py-4 rounded font-bold">Shop Flowers</a>
+					</div>
 				</div>
 			</section>
+		<!-- Page Container -->
+		<main class="max-w-screen-lg w-full mx-auto px-6 md:px-0">
+		<!-- Intro -->
+
 
 		<!-- One -->
-			<section id="one" class="main style2 right dark fullscreen">
-				<div class="content box style2">
+			<section id="one" class="py-12">
+				<div class="">
 					<header>
-						<h2>About the Yorkshire Floral Company</h2>
+						<h2 class="text-center text-3xl mb-4">About the Yorkshire Floral Company</h2>
 					</header>
-					<p>Hello! The Yorkshire Floral Co was established in 2020. Having always had
+					<p class="text-lg leading-8">Hello! The Yorkshire Floral Co was established in 2020. Having always had
 					 a flair for creativity we pride ourselves bringing out of the box ideas to life.
-					 We work with luxury seasonal fresh flowers as well as the highest quality silk 
-					 faux flowers to create floral masterpieces tailored to suit your personal taste. 
-					Having flowered venues across Yorkshire and beyond we can recommend ways to enhance your event spaces.  
+					 We work with luxury seasonal fresh flowers as well as the highest quality silk
+					 faux flowers to create floral masterpieces tailored to suit your personal taste.
+					Having flowered venues across Yorkshire and beyond we can recommend ways to enhance your event spaces.
 					</p>
 				</div>
-				<a href="#two" class="button style2 down anchored">Next</a>
+				<div class="flex flex-col space-y-4 md:flex-row my-16 relative">
+					<div class="w-full md:basis-6/12 md:px-6">
+						<img class="md:-mt-8" src="images/wedding-flowers-jan-23.jpg" alt="Wedding Flowers" />
+					</div>
+					<div class="w-full md:basis-6/12 md:px-6">
+						<img class="md:mt-12" src="images/red-bouquet-jan-23.jpg" alt="Wedding Flowers" />
+					</div>
+				</div>
 			</section>
 
 		<!-- Two -->
-			<section id="two" class="main style2 left dark fullscreen">
+			<section id="two" class="">
 				<div class="content box style2">
 					<header>
-						<h2>Why Use The Yorkshire Floral Company</h2>
+						<h2 class="text-center text-3xl mb-4">Why Use The Yorkshire Floral Company</h2>
 					</header>
-					<p>The modern day florist. We are a young team and have the knowledge behind current trends. 
+					<p class="text-lg">The modern day florist. We are a young team and have the knowledge behind current trends.
 					Whether you are in need of a florist for your wedding day or you would like something bespoke
-					made for your home we pride ourselves on offering a personal customer experience.   
-  					Having had our work featured on ‘Lorraine Good Morning Britain . 
+					made for your home we pride ourselves on offering a personal customer experience.
+  					Having had our work featured on ‘Lorraine Good Morning Britain .
  					</p>
 				</div>
-				<a href="#work" class="button style2 down anchored">Next</a>
 			</section>
 
-			<section id="services" class="">
-				<header>
-					<h2>My Services</h2>
-					<p></p>
-				</header>
-
-				<div class="services">
-					<div class="services-box">
-						<div class="services-image">
-							<img src="images/wedding_cream.jpg" alt="wedding flowers">
+			<section id="wedding-portfolio" class="py-12">
+				<div>
+					<h2 class="text-center text-3xl mb-4">Wedding Portfolio</h2>
+					<h3 class="text-center text-xl mb-4">A selection of images from some of our most recent weddings please use the <a href="#contact">contact</a> form to enquire about your wedding day</h3>
+				</div>
+				<div id="gallery" class="overflow-hidden text-gray-700">
+					<div class="container px-5 py-2 mx-auto lg:pt-24 lg:px-0">
+						<div class="flex flex-wrap -m-1 md:-m-2">
+						<div class="flex flex-wrap w-1/2">
+							<div class="w-1/2 p-1 md:p-2">
+							<img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+								src="./images/white-flowers.jpg">
+							</div>
+							<div class="w-1/2 p-1 md:p-2">
+							<img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+								src="./images/weddings-jan-23.jpg">
+							</div>
+							<div class="w-full p-1 md:p-2">
+							<img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+								src="./images/wedding-flowers.jpg">
+							</div>
 						</div>
-						<div class="services-content">
-							<h3>Weddings</h3>
-							<p>
-							    Weddings are our passion. Flowers are such an important factor of your wedding day 
-								and can be often the first thing your guests will see. We offer a free appointment 
-								to talk over your ideas and offer a no obligation quote. When booking we will create a 
-								mood board for your event and make your flower dreams come true.
-							</p>
-							<p>
-								We provide:
-								<ul>
-									<li>Wedding flowers from start to finish</li>
-									<li>Bouquets</li>
-									<li>Buttonholes</li>
-									<li>Flowers for the little ones</li>
-									<li>Centrepieces</li>
-									<li>Arches</li>
-									<li>Garlands</li>
-								</ul>
-							</p>
-							<a href="#contact">Get in Touch to Book!</a>
+						<div class="flex flex-wrap w-1/2">
+							<div class="w-full p-1 md:p-2">
+							<img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+								src="./images/wedding_cream.jpg">
+							</div>
+							<div class="w-1/2 p-1 md:p-2">
+							<img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+								src="./images/wedding-flowers-2.jpg">
+							</div>
+							<div class="w-1/2 p-1 md:p-2">
+							<img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+								src="./images/white-bouquet-jan-23.jpg">
+							</div>
 						</div>
-					</div>
-					<div class="services-box">
-						<div class="services-image">
-							<img src="images/installations.jpg" alt="installations">
-
-						</div>
-						<div class="services-content">
-							<h3>Floral Installations</h3>
-							<p>
-								For your home or business. I love to bring your ideas to life and create beautiful
-								show stopping faux flower installations that will make you stand out, weather
-								that be a floral corner of a room or a festive Christmas doorway. Each
-								installation is bespoke and quoted individually. Please get in touch if you would
-								like to discuss any ideas.
-							</p>
-							<p>
-								I can also provide:
-								<ul>
-									<li>Office and Home arrangements</li>
-									<li>Wreaths</li>
-								</ul>
-							</p>
-							<a href="#contact">Get in Touch to Book!</a>
 						</div>
 					</div>
 				</div>
 			</section>
-
-		<!-- Work -->
-			<section id="work" class="main style3 primary">
-				<div class="content">
-					<header>
-						<h2>My Work</h2>
-						<p>I'm so proud of my work, whether it be for your wedding or for your office or home.
-						You get the best version of my flowers every time. Here's some arrangements I'm particularly proud of.</p>
-					</header>
-
-					<!-- Gallery  -->
-						<div class="gallery">
-							<article class="from-left">
-								<a href="images/bronte_bar_co.jpg" class="image fit"><img src="images/bronte_bar_co.jpg" title="The Anonymous Red" alt="Bar flowers" /></a>
-							</article>
-							<article class="from-right">
-								<a href="images/centrepieces.jpg" class="image fit"><img src="images/centrepieces.jpg" title="Centrepieces" alt="Wedding Centrepieces" /></a>
-							</article>
-							<article class="from-left">
-								<a href="images/floral_co_display.jpg" class="image fit"><img src="images/floral_co_display.jpg" title="Logo" alt="Yorkshire Floral Co Logo" /></a>
-							</article>
-							<article class="from-right">
-								<a href="images/wedding_cream.jpg" class="image fit"><img src="images/wedding_cream.jpg" title="Wedding Flowers" alt="Wedding Flowers" /></a>
-							</article>
-							<article class="from-left">
-								<a href="images/wedding-flowers.jpg" class="image fit"><img src="images/wedding-flowers-2.jpg" title="Wedding Flowers" alt="Wedding Flowers" /></a>
-							</article>
-							<article class="from-right">
-								<a href="images/boxes.jpg" class="image fit"><img src="images/boxes.jpg" title="Boxes" alt="Flower Boxes" /></a>
-							</article>
-							<article class="from-left">
-								<a href="images/window_flowers.jpg" class="image fit"><img src="images/window_flowers.jpg" title="Window Flowers" alt="window flowers" /></a>
-							</article>
-							<article class="from-right">
-								<a href="images/door_flowers.jpg" class="image fit"><img src="images/door_flowers.jpg" title="Door Flowers" alt="" /></a>
-							</article>
-							<article class="from-left">
-								<a href="images/flower_stands.jpg" class="image fit"><img src="images/flower_stands.jpg" title="Flower stands" alt="flower stands" /></a>
-							</article>
-							<article class="from-right">
-								<a href="images/door_flowers_2.jpg" class="image fit"><img src="images/door_flowers_2.jpg" title="Door Flowers" alt="Door Flowers" /></a>
-							</article>
+			<section id="floral-installations" class="py-12">
+				<div>
+					<h2 class="text-center text-3xl mb-4">Floral Installations</h2>
+					<h3 class="text-center text-xl mb-4">Our floral installations are a revelation! See how we can turn an empty space into a paradise. <a href="#contact">Click to get in touch.</a></h3>
+				</div>
+				<div id="gallery" class="overflow-hidden text-gray-700">
+					<div class="container px-5 py-2 mx-auto lg:pt-24 lg:px-0">
+						<div class="flex flex-wrap -m-1 md:-m-2">
+						<div class="flex flex-wrap w-1/2">
+							<div class="w-1/2 p-1 md:p-2">
+							<img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+								src="./images/installations.jpg">
+							</div>
+							<div class="w-1/2 p-1 md:p-2">
+							<img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+								src="./images/stairs.jpg">
+							</div>
+							<div class="w-full p-1 md:p-2">
+							<img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+								src="./images/rustic-arch-backdrop.jpg">
+							</div>
 						</div>
-
+						<div class="flex flex-wrap w-1/2">
+							<div class="w-full p-1 md:p-2">
+							<img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+								src="./images/bronte_bar_co.jpg">
+							</div>
+							<div class="w-1/2 p-1 md:p-2">
+							<img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+								src="./images/arch-back-drop.jpg">
+							</div>
+							<div class="w-1/2 p-1 md:p-2">
+							<img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+								src="./images/elixir.jpg">
+							</div>
+						</div>
+						</div>
+					</div>
 				</div>
 			</section>
-
+		</main>
+		<!-- End page container -->
 		<!-- Testimonials -->
-		<section id="testimonials">
-			<div class="overlay"></div>
-			<h3>Testimonials</h3>
-			<p>Lovely reviews from my lovely clients</p>
-			<div class="slider-wrapper">
-				<div class="slide active">
-					<div class="content">
-						<div class="review">
-							"I always recommend you to everyone I meet I think you make some beautiful things”
-						</div>
-						<div class="reviewer">
-							Chloe
+		<section class="bg-pink border-b border border-grey">
+			<h2 class="text-center text-3xl py-6">Testimonials</h2>
+			<div class="mx-auto max-w-7xl md:grid md:grid-cols-2 md:px-6 lg:px-8">
+				<div class="py-12 px-6 md:flex md:flex-col md:border-r md:border-pink md:py-16 md:pl-0 md:pr-10 lg:pr-16">
+
+				<blockquote class="mt-6 md:flex md:flex-grow md:flex-col">
+					<div class="relative text-lg font-medium text-black md:flex-grow">
+					<svg class="absolute top-0 left-0 h-8 w-8 -translate-x-3 -translate-y-2 transform text-white" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
+						<path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+					</svg>
+					<p class="relative">Couldn't recommend Lucy highly enough as a wedding florist. We booked her for our November wedding and she created beautiful table centre pieces and venue decorations with a mix of fresh and faux flowers. She took the time to understand the vibe we had in mind (autumnal and rustic) and the end result was even better than we expected. Lucy was great to work with, always very responsive and took the time over several phone calls and emails to get the service right. Thank you again!</p>
+					</div>
+					<footer class="mt-8">
+					<div class="flex items-start">
+						<div class="text-black">
+						<div class="text-base font-medium">Olivia & Ben</div>
+						<div class="text-base font-medium">Tithe Barn November 2022</div>
 						</div>
 					</div>
+					</footer>
+				</blockquote>
 				</div>
-				<div class="slide">
-					<div class="content">
-						<div class="review">
-							“We can’t thank you enough, it actually makes the bar, everyone loves it!”						</div>
-						<div class="reviewer">
-							Bronte bar co
+				<div class="border-t-2 border-grey py-12 px-6 md:border-t-0 md:border-l md:py-16 md:pr-0 md:pl-10 lg:pl-16">
+
+				<blockquote class="mt-6 md:flex md:flex-grow md:flex-col">
+					<div class="relative text-lg font-medium text-black md:flex-grow">
+					<svg class="absolute top-0 left-0 h-8 w-8 -translate-x-3 -translate-y-2 transform text-white" fill="currentColor" viewBox="0 0 32 32">
+						<path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+					</svg>
+					<p class="relative">Lucy was amazing from the word go. She listened to everything we wanted and made the whole process so much easier, plus her decorations really gave our marquee the perfect finishing touches.</p>
+					</div>
+					<footer class="mt-8">
+					<div class="flex items-start">
+						<div class="text-black">
+						<div class="text-base font-medium">Christina & Rob</div>
 						</div>
 					</div>
-				</div>
-				<div class="slide">
-					<div class="content">
-						<div class="review">
-							“You're brilliant I look at my wreath every day and just love it! The quality is excellent”						</div>
-						<div class="reviewer">
-							Jodie
-						</div>
-					</div>
+					</footer>
+				</blockquote>
 				</div>
 			</div>
 		</section>
 
 		<!-- Contact -->
-			<section id="contact" class="main style3 secondary">
+			<section id="contact" class="py-32 flex flex-col items-center justify-center bg-grey-100">
 				<div class="content">
-					<header>
-						<h2>Get in Touch</h2>
-						<p>I'm always happy to take bookings and enquiries for work, simply fill in the form below and I'll be in touch within one working day</p>
+					<header class="text-center">
+						<h2 class="font-bold text-3xl mb-2">Get in Touch</h2>
+						<p class="text-lg">I'm always happy to take bookings and enquiries for work, simply fill in the form below and I'll be in touch within one working day</p>
 					</header>
-					<div class="box">
-						<form method="post" action="https://admin.bvswebdesign.co.uk/yorkshireflowers-form.php">
-							<div class="fields">
-								<div class="field half"><input type="text" name="name" placeholder="Name" /></div>
-								<div class="field half"><input type="email" name="email" placeholder="Email" /></div>
-								<div class="field"><textarea name="message" placeholder="Message" rows="6"></textarea></div>
-							</div>
-							<ul class="actions special">
-								<li><input name="submit" type="submit" value="Send Message" /></li>
+					<div class="box flex items-center justify-center flex-col py-16">
+						<form method="post" action="https://admin.bvswebdesign.co.uk/yorkshireflowers-form.php" class="w-full md:w-9/12 mx-auto">
+							<div class="fields w-9/12 space-y-2 mx-auto">
+								<div class="w-full"><input class="w-full py-2 rounded px-1" type="text" id="name" name="name" placeholder="Name" /></div>
+								<div class="w-full"><input class="w-full py-2 rounded px-1" type="email"  id="email" name="email" placeholder="Email" /></div>
+								<div class="w-full"><input class="w-full py-2 rounded px-1" type="text" id="phone"  name="phone" placeholder="Phone Number" /></div>
+								<div class="w-full"><input class="w-full py-2 rounded px-1" type="date" id="date"  name="date" placeholder="When are you getting married?" /></div>
+								<div class="w-full"><input class="w-full py-2 rounded px-1" type="text" id="venue"  name="venue" placeholder="Which venue have you chosen?" /></div>
+								<div class="w-full"><input class="w-full py-2 rounded px-1" type="text"  id="budget" name="budget" placeholder="Do you have a budget in mind?" /></div>
+								<div class="w-full"><input class="w-full py-2 rounded px-1" type="text" name="marketing" id="marketing" placeholder="How did you hear about me?" /></div>
+								<div class="w-full"><textarea id="message"  class="w-full py-2 rounded px-1" name="message" placeholder="Message" rows="6"></textarea></div>
+								<ul class="actions special">
+								<li><input class="border border-2 border-white px-2 py-4 rounded hover:bg-pink cursor-pointer" name="submit" type="submit" value="Send Message" /></li>
 							</ul>
+							</div>
+
 						</form>
 					</div>
 				</div>
 			</section>
 
 		<!-- Footer -->
-			<footer id="footer">
+			<footer class="footer flex flex-col md:flex-row justify-between bg-grey-200 py-2 items-center">
 
 				<!-- Icons -->
-					<ul class="icons">
-						<li><a href="https://m.facebook.com/theyorkshirefloralco/" class="icon"><img src="./images/facebook_icon.svg" alt="Facebook logo"><span class="label">Facebook</span></a></li>
-						<li><a href="https://www.instagram.com/theyorkshirefloralco/" class="icon"><img src="./images/instagram_icon.svg" alt="Instagram logo"><span class="label">Instagram</span></a></li>
+					<ul class="icons flex sm:w-3/12 lg:w-1/12 justify-around">
+						<li><a href="https://m.facebook.com/theyorkshirefloralco/" class="icon"><img class="h-8" src="./images/facebook_icon.svg" alt="Facebook logo"></a></li>
+						<li><a href="https://www.instagram.com/theyorkshirefloralco/" class="icon"><img class="h-8" src="./images/instagram_icon.svg" alt="Instagram logo"></a></li>
 					</ul>
 
 				<!-- Menu -->
-					<ul class="menu">
-						<li>&copy; The Yorkshire Floral Co</li><li>Design: <a href="https://www.bvswebdesign.co.uk">BVSWebDesign</a></li>
+					<ul class="menu flex flex-col sm:flex-row text-center mt-5 sm:mt-0 justify-around w-full sm:w-8/12 md:w-full lg:w-4/12">
+						<li>&copy; The Yorkshire Floral Co</li>
+						<li>Design: <a href="https://www.bvswebdesign.co.uk">BVSWebDesign</a></li>
 					</ul>
 
 			</footer>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
 			<script>
-				function testimonialsSlider(){
-					let currentSlide = 0;
-					function nextSlidePlease(){
-						const slides = document.querySelectorAll('.slide')
-						slides[currentSlide].classList.remove('active')
-						currentSlide++
+				const toggleNav = e => {
+					const mobileNav = document.querySelector('.mobile-nav');
+					if(!mobileNav) return;
 
-						if(currentSlide === slides.length){
-							currentSlide = 0;
-						}
-
-						slides[currentSlide].classList.add('active')
-					}
-
-					setInterval(() => {
-						nextSlidePlease()
-					}, 6000);
+					mobileNav.classList.toggle('mr-[-100%]');
 				}
-
-				testimonialsSlider()
 
 			</script>
 	</body>
