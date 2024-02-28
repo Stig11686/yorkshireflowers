@@ -14,6 +14,7 @@
 		$navbarToggle = $('.navbar-toggle');
 
 		$navbarToggle.on('click', function(){
+			console.log('clicked');
 			$offScreenNav.toggleClass('active');
 			$body.toggleClass('overflow-hidden');
 		})

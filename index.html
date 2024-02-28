@@ -53,262 +53,460 @@
 		</script>
 	</head>
 	<body class="is-preload">
-
-		<!-- Header -->
-			<header id="header" class="flex w-full justify-between items-center bg-pink px-4">
-				<a href="./index.html">
-					<img src="images/logo.jpg" alt="logo" class="h-20" />
+		<div class="bg-white">
+			<header class="absolute inset-x-0 top-0 z-50">
+			  <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+				<div class="flex lg:flex-1">
+				  <a href="#" class="-m-1.5 p-1.5">
+					<span class="sr-only">The Yorkshire Floral Co</span>
+					<img class="h-20 w-auto" src="images/logo.jpg" alt="Yorkshire Floral Co Logo">
 				</a>
-				<nav class="hidden md:block">
-					<ul class="flex w-full space-x-4 font-bold">
-						<li><a href="#intro">Intro</a></li>
-						<li><a href="#one">What I Do</a></li>
-						<li><a href="#two">Who I Am</a></li>
-						<li><a href="#work">My Work</a></li>
-						<li><a href="./hire-items.html">Hire Items</a></li>
-						<li><a href="https://www.etsy.com/uk/shop/TheYorkshireFloralCo/" target="_blank">My Shop</a></li>
-						<li><a href="#contact">Contact</a></li>
-					</ul>
-				</nav>
-				<div onclick="toggleNav()" class="navbar-toggle md:hidden flex flex-col justify-around space-y-1 border border-2 border-pink"><span class="h-1 w-10 bg-grey-500 block hamburger"></span><span class="h-1 w-10 bg-grey-500 block hamburger"></span><span class="h-1 w-10 bg-grey-500 block hamburger"></span></div>
-				<div class="mobile-nav absolute h-full w-full bg-grey-700 top-0 right-0 bottom-0 z-50 mr-[-100%] transition-all ease-in-out duration-1000 delay-150">
-					<nav class="flex items-center justify-center text-white flex-col min-h-screen space-y-4 relative md:hidden">
-						<div onclick="toggleNav()" class="closeNav md:hidden absolute top-0 right-0 mt-6 mr-6 p-4 text-white flex items-center justify-center font-bold">X</div>
-						<a href="index.html">Home</a>
-						<a href="hire-items.html">Hire Items</a>
-						<a href="https://www.etsy.com/uk/shop/TheYorkshireFloralCo/" target="_blank">My Shop</a>
-					</nav>
 				</div>
-			</header>
-
-			<section class="home-header relative" id="intro" class="py-12">
-			<!-- <div class="absolute top-0 left-0 w-full h-full bg-black opacity-30"></div> -->
-				<div class="content px-6 z-40 border border-1 border-white p-2 rounded">
-					<div class="bg-white opacity-80 p-12 flex items-start justify-center flex-col">
-						<h2 class="text-3xl font-bold text-grey">Welcome to the Yorkshire Floral Co</h2>
-						<h3>The Modern Day Florist</h3>
-						<a href="https://www.etsy.com/uk/shop/TheYorkshireFloralCo/" target="_blank" class="mt-6 border border-2 border-pink text-dark px-6 py-4 rounded font-bold">Shop Flowers</a>
+				<div class="flex lg:hidden" onclick="toggleNav()">
+				  <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+					<span class="sr-only">Open main menu</span>
+					<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+					  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+					</svg>
+				  </button>
+				</div>
+				<div class="hidden lg:flex lg:gap-x-12">
+				  <a href="https://www.etsy.com/uk/shop/TheYorkshireFloralCo/" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-6 text-gray-900 hover:bg-gray-50">Shop</a>
+				  <a href="#story" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-6 text-gray-900 hover:bg-gray-50">Our Story</a>
+				  <a href="./hire-items.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-6 text-gray-900 hover:bg-gray-50">Hire Items</a>
+				  <a href="#contact" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-6 text-gray-900 hover:bg-gray-50">Contact</a>
+				</div>
+			  </nav>
+			  <!-- Mobile menu, show/hide based on menu open state. -->
+			  <div class="lg:hidden" role="dialog" aria-modal="true">
+				<div class="mobile-nav fixed inset-y-0 right-0 z-50 mr-[-100%] w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+				  <div class="flex items-center justify-between">
+					<a href="#" class="-m-1.5 p-1.5">
+					  <span class="sr-only">Your Company</span>
+					  <img class="h-8 w-auto" src="images/logo.jpg" alt="Yorkshire Floral Co Logo">
+					</a>
+					<button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" onclick="toggleNav()">
+					  <span class="sr-only">Close menu</span>
+					  <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+					  </svg>
+					</button>
+				  </div>
+				  <div class="mt-6 flow-root">
+					<div class="-my-6 divide-y divide-gray-500/10">
+					  <div class="space-y-2 py-6">
+						<a href="https://www.etsy.com/uk/shop/TheYorkshireFloralCo/" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Shop</a>
+						<a href="#story" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Our Story</a>
+						<a href="./hire-items.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Hire Items</a>
+						<a href="#contact" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contact</a>
+					  </div>
 					</div>
+				  </div>
 				</div>
-			</section>
+			  </div>
+			</header>
+			<main>
+			  <div class="relative isolate">
+				<svg class="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-gray-200 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]" aria-hidden="true">
+				  <defs>
+					<pattern id="1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse">
+					  <path d="M.5 200V.5H200" fill="none" />
+					</pattern>
+				  </defs>
+				  <svg x="50%" y="-1" class="overflow-visible fill-gray-50">
+					<path d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z" stroke-width="0" />
+				  </svg>
+				  <rect width="100%" height="100%" stroke-width="0" fill="url(#1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84)" />
+				</svg>
+				<div class="absolute left-1/2 right-0 top-0 -z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48" aria-hidden="true">
+				  <div class="aspect-[801/1036] w-[50.0625rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30" style="clip-path: polygon(63.1% 29.5%, 100% 17.1%, 76.6% 3%, 48.4% 0%, 44.6% 4.7%, 54.5% 25.3%, 59.8% 49%, 55.2% 57.8%, 44.4% 57.2%, 27.8% 47.9%, 35.1% 81.5%, 0% 97.7%, 39.2% 100%, 35.2% 81.4%, 97.2% 52.8%, 63.1% 29.5%)"></div>
+				</div>
+				<div class="overflow-hidden">
+				  <div class="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
+					<div class="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
+					  <div class="relative w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
+						<h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">The Yorkshire Floral Co</h1>
+						<p class="mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">Tag Line tbc</p>
+						<div class="mt-10 flex items-center gap-x-6">
+						  <a href="https://www.etsy.com/uk/shop/TheYorkshireFloralCo/" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Shop Now</a>
+						  <a href="#wedding-portfolio" class="text-sm font-semibold leading-6 text-gray-900">See our Work <span aria-hidden="true">→</span></a>
+						</div>
+					  </div>
+					  <div class="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
+						<div class="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
+						  <div class="relative">
+							<img src="images/bride-flowers-stairs.jpg" alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
+							<div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
+						  </div>
+						</div>
+						<div class="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
+						  <div class="relative">
+							<img src="images/board-flowers.jpg" alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
+							<div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
+						  </div>
+						  <div class="relative">
+							<img src="images/bouquets-hands.jpg" alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
+							<div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
+						  </div>
+						</div>
+						<div class="w-44 flex-none space-y-8 pt-32 sm:pt-0">
+						  <div class="relative">
+							<img src="images/weddings-jan-23.jpg" alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
+							<div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
+						  </div>
+						  <div class="relative">
+							<img src="images/pillar-flowers.jpg" alt="" class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg">
+							<div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
+						  </div>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</main>
+		  </div>
+		  
+		
 		<!-- Page Container -->
 		<main class="max-w-screen-lg w-full mx-auto px-6 md:px-0">
 		<!-- Intro -->
 
-
-		<!-- One -->
-			<section id="one" class="py-12">
-				<div class="">
-					<header>
-						<h2 class="text-center text-3xl mb-4">About the Yorkshire Floral Company</h2>
-					</header>
-					<p class="text-lg leading-8">Hello! The Yorkshire Floral Co was established in 2020. Having always had
-					 a flair for creativity we pride ourselves bringing out of the box ideas to life.
-					 We work with luxury seasonal fresh flowers as well as the highest quality silk
-					 faux flowers to create floral masterpieces tailored to suit your personal taste.
-					Having flowered venues across Yorkshire and beyond we can recommend ways to enhance your event spaces.
-					</p>
+		<div class="bg-white py-24 sm:py-32">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+			  <div class="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+				<div class="lg:pr-4 h-full">
+				  <div class="relative h-full overflow-hidden rounded-3xl bg-gray-900 px-6 pb-9 pt-64 shadow-2xl sm:px-12 lg:max-w-lg lg:px-8 lg:pb-8 xl:px-10 xl:pb-10">
+					<img class="absolute inset-0 h-full w-full object-cover" src="images/box-flowers.jpg" alt="Beautiful wedding flowers from The Yorkshire Floral Co">					
+				  </div>
 				</div>
-				<div class="flex flex-col space-y-4 md:flex-row my-16 relative">
-					<div class="w-full md:basis-6/12 md:px-6">
-						<img class="md:-mt-8" src="images/wedding-flowers-jan-23.jpg" alt="Wedding Flowers" />
+				<div>
+				  <div class="text-base leading-7 text-gray-700 lg:max-w-lg">
+					<p class="text-base font-semibold leading-7 text-indigo-600">Our values</p>
+					<h2 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Our Story</h2>
+					<div class="max-w-xl">
+					  <p class="mt-6">Established in 2020, The Yorkshire Floral Co are passionate and dedicated to creating shoow stopping floral designs.
+						Having always had a flair for creativity we pride ourselves on bringing out of the box ideas to life.
+						We work with luxury seasonal fresh flowers as well as the highest quality silk faux flowers to create floral masterpieces tailored to suit your personal taste.
+						Having flowered venues across the UK and beyond we can recommend ways to enhance your event spaces, while optimising your budget.</p>
+					  <p class="mt-8">The Modern Day Florist, we are a young team and have the knowledge behind the current trends. Whether you are in 
+						need of a florist for your wedding day or require a bespoke creation for your home or your business, we pride ourselves on offering a personal customer experience.
+						As seen on 'Lorraine, Good Morning Britain'.</p>
 					</div>
-					<div class="w-full md:basis-6/12 md:px-6">
-						<img class="md:mt-12" src="images/red-bouquet-jan-23.jpg" alt="Wedding Flowers" />
-					</div>
+				  </div>
+				  <div class="mt-10 flex">
+					<a href="./hire-items.html" class="text-base font-semibold leading-7 text-indigo-600">See our Hire Items <span aria-hidden="true">&rarr;</span></a>
+				  </div>
 				</div>
-			</section>
-
-		<!-- Two -->
-			<section id="two" class="">
-				<div class="content box style2">
-					<header>
-						<h2 class="text-center text-3xl mb-4">Why Use The Yorkshire Floral Company</h2>
-					</header>
-					<p class="text-lg">The modern day florist. We are a young team and have the knowledge behind current trends.
-					Whether you are in need of a florist for your wedding day or you would like something bespoke
-					made for your home we pride ourselves on offering a personal customer experience.
-  					Having had our work featured on ‘Lorraine Good Morning Britain .
- 					</p>
-				</div>
-			</section>
+			  </div>
+			</div>
+		  </div>
+		
 
 			<section id="wedding-portfolio" class="py-12">
 				<div>
-					<h2 class="text-center text-3xl mb-4">Wedding Portfolio</h2>
-					<h3 class="text-center text-xl mb-4">A selection of images from some of our most recent weddings please use the <a href="#contact">contact</a> form to enquire about your wedding day</h3>
+					<p class="text-base font-semibold leading-7 text-indigo-600">Our Work</p>
+					<h2 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Wedding Flowers Made Special</h2>
 				</div>
-				<div id="gallery" class="overflow-hidden text-gray-700">
-					<div class="container px-5 py-2 mx-auto lg:pt-24 lg:px-0">
-						<div class="flex flex-wrap -m-1 md:-m-2">
-						<div class="flex flex-wrap w-1/2">
-							<div class="w-1/2 p-1 md:p-2">
-							<img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-								src="./images/white-flowers.jpg">
-							</div>
-							<div class="w-1/2 p-1 md:p-2">
-							<img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-								src="./images/weddings-jan-23.jpg">
-							</div>
-							<div class="w-full p-1 md:p-2">
-							<img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-								src="./images/wedding-flowers.jpg">
-							</div>
+				<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+					<div class="grid gap-4">
+						<div>
+							<img class="h-auto max-w-full rounded-lg" src="images/alter-flowers.jpg" alt="Alter Flowers">
 						</div>
-						<div class="flex flex-wrap w-1/2">
-							<div class="w-full p-1 md:p-2">
-							<img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-								src="./images/wedding_cream.jpg">
-							</div>
-							<div class="w-1/2 p-1 md:p-2">
-							<img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-								src="./images/wedding-flowers-2.jpg">
-							</div>
-							<div class="w-1/2 p-1 md:p-2">
-							<img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-								src="./images/white-bouquet-jan-23.jpg">
-							</div>
+						<div>
+							<img class="h-auto max-w-full rounded-lg" src="images/table-decs.jpg" alt="">
 						</div>
+						<div>
+							<img class="h-auto max-w-full rounded-lg" src="images/wedding-flowers-1.jpg" alt="">
+						</div>
+					</div>
+					<div class="grid gap-4">
+						<div>
+							<img class="h-auto max-w-full rounded-lg" src="images/this-is-where-the-magic-happens.jpg" alt="">
+						</div>
+						<div>
+							<img class="h-auto max-w-full rounded-lg" src="images/wedding-flowers-2.jpg" alt="">
+						</div>
+						<div>
+							<img class="h-auto max-w-full rounded-lg" src="images/wedding-flowers-jan-23.jpg" alt="">
+						</div>
+					</div>
+					<div class="grid gap-4">
+						<div>
+							<img class="h-auto max-w-full rounded-lg" src="images/easals.jpg" alt="">
+						</div>
+						<div>
+							<img class="h-auto max-w-full rounded-lg" src="images/bride-groom-circle-arch.jpg" alt="">
+						</div>
+						<div>
+							<img class="h-auto max-w-full rounded-lg" src="images/door-arch-flowers.jpg" alt="">
+						</div>
+					</div>
+					<div class="grid gap-4">
+						<div>
+							<img class="h-auto max-w-full rounded-lg" src="images/wedding-post.jpg" alt="">
+						</div>
+						<div>
+							<img class="h-auto max-w-full rounded-lg" src="images/bridal-flowers-forest.jpg" alt="">
+						</div>
+						<div>
+							<img class="h-auto max-w-full rounded-lg" src="images/bridal-party-bouquets.jpg" alt="">
 						</div>
 					</div>
 				</div>
-			</section>
+				<div class="mt-10 flex">
+					<a href="#contact" class="text-base font-semibold leading-7 text-indigo-600">Get in touch to see how we can make your day special <span aria-hidden="true">&rarr;</span></a>
+				</div>
+			</section> 
+			
 			<section id="floral-installations" class="py-12">
 				<div>
-					<h2 class="text-center text-3xl mb-4">Floral Installations</h2>
-					<h3 class="text-center text-xl mb-4">Our floral installations are a revelation! See how we can turn an empty space into a paradise. <a href="#contact">Click to get in touch.</a></h3>
+					<p class="text-base font-semibold leading-7 text-indigo-600">Turn your empty space into a paradise.</p>
+					<h2 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Floral Installations</h2>
 				</div>
 				<div id="gallery" class="overflow-hidden text-gray-700">
-					<div class="container px-5 py-2 mx-auto lg:pt-24 lg:px-0">
-						<div class="flex flex-wrap -m-1 md:-m-2">
-						<div class="flex flex-wrap w-1/2">
-							<div class="w-1/2 p-1 md:p-2">
-							<img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-								src="./images/installations.jpg">
+					<div class="grid gap-4">
+						<div class="grid grid-cols-4 gap-4">
+							<div>
+								<img class="h-auto object-cover max-w-full rounded-lg" src="images/clare-wareham-archway.jpg" alt="">
 							</div>
-							<div class="w-1/2 p-1 md:p-2">
-							<img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-								src="./images/stairs.jpg">
+							<div>
+								<img class="h-auto object-cover max-w-full rounded-lg" src="images/door-arch-flowers.jpg" alt="">
 							</div>
-							<div class="w-full p-1 md:p-2">
-							<img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-								src="./images/rustic-arch-backdrop.jpg">
+							<div>
+								<img class="h-auto object-cover max-w-full rounded-lg" src="images/window_flowers.jpg" alt="">
 							</div>
-						</div>
-						<div class="flex flex-wrap w-1/2">
-							<div class="w-full p-1 md:p-2">
-							<img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-								src="./images/bronte_bar_co.jpg">
-							</div>
-							<div class="w-1/2 p-1 md:p-2">
-							<img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-								src="./images/arch-back-drop.jpg">
-							</div>
-							<div class="w-1/2 p-1 md:p-2">
-							<img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-								src="./images/elixir.jpg">
-							</div>
-						</div>
 						</div>
 					</div>
 				</div>
 			</section>
+
+			<section class="bg-white dark:bg-gray-900">
+				<div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+					<div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+						<h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Owner and Creative Director - Lucy Harper</h2>
+						<p class="mb-4">Can I have some about me text for here?</p>
+					</div>
+					<div class="grid grid-cols-1 gap-4 mt-8">
+						<img class="w-full rounded-lg" src="images/lucy-flowers.jpg" alt="Lucy - The Yorkshire Floral Co">					</div>
+				</div>
+			</section>
+				  
+	
 		</main>
 		<!-- End page container -->
 		<!-- Testimonials -->
-		<section class="bg-pink border-b border border-grey">
-			<h2 class="text-center text-3xl py-6">Testimonials</h2>
-			<div class="mx-auto max-w-7xl md:grid md:grid-cols-2 md:px-6 lg:px-8">
-				<div class="py-12 px-6 md:flex md:flex-col md:border-r md:border-pink md:py-16 md:pl-0 md:pr-10 lg:pr-16">
 
-				<blockquote class="mt-6 md:flex md:flex-grow md:flex-col">
-					<div class="relative text-lg font-medium text-black md:flex-grow">
-					<svg class="absolute top-0 left-0 h-8 w-8 -translate-x-3 -translate-y-2 transform text-white" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
-						<path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
-					</svg>
-					<p class="relative">Couldn't recommend Lucy highly enough as a wedding florist. We booked her for our November wedding and she created beautiful table centre pieces and venue decorations with a mix of fresh and faux flowers. She took the time to understand the vibe we had in mind (autumnal and rustic) and the end result was even better than we expected. Lucy was great to work with, always very responsive and took the time over several phone calls and emails to get the service right. Thank you again!</p>
-					</div>
-					<footer class="mt-8">
-					<div class="flex items-start">
-						<div class="text-black">
-						<div class="text-base font-medium">Olivia & Ben</div>
-						<div class="text-base font-medium">Tithe Barn November 2022</div>
-						</div>
-					</div>
-					</footer>
-				</blockquote>
+		<section class="bg-white dark:bg-gray-900">
+			<div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
+				<div class="mx-auto max-w-screen-sm">
+					<h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Testimonials</h2>
+					<p class="mb-8 font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">Don't take our word for it, listen to what our clients say about us!</p>
+				</div> 
+				<div class="grid mb-8 lg:mb-12 lg:grid-cols-2">
+					<figure class="flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-b border-gray-200 md:p-12 lg:border-r dark:bg-gray-800 dark:border-gray-700">
+						<blockquote class="mx-auto mb-8 max-w-2xl text-gray-500 dark:text-gray-400">
+							<h3 class="text-lg font-semibold text-gray-900 dark:text-white">Strangers have seen my flowers and contacted me!</h3>
+							<p class="my-4">"I can not overstate how brilliant the work is Lucy does with flowering for weddings. I have had so, so many compliments on my bouquets, my husbands pocket flowers, the ceremony flowers, aisle flowers, table flowers and the arch!</p>
+							<p class="my-4">Strangers have seen my pictures on the internet and have contacted me to ask who did my flowers, that is how impactful and beautiful they are.</p>
+							<p class="my-4">I asked for bright, unusual Mexican inspired decor and Lucy delivered above and beyond. She also helped my stylist with setup and was so friendly, excited and lovely. She was amazing at responding to my many queries too. I can't recommend the Yorkshire Floral Company enough</p>
+						</blockquote>
+						<figcaption class="flex items-center space-x-3">
+							<div class="space-y-0.5 font-medium dark:text-white text-left">
+								<div>Emma and Ant</div>
+								<div class="text-sm font-light text-gray-500 dark:text-gray-400">June 2023</div>
+							</div>
+						</figcaption>    
+					</figure>
+					<figure class="flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-b border-gray-200 lg:border-b-0 md:p-12 lg:border-r dark:bg-gray-800 dark:border-gray-700">
+						<blockquote class="mx-auto mb-8 max-w-2xl text-gray-500 dark:text-gray-400">
+							<h3 class="text-lg font-semibold text-gray-900 dark:text-white">I couldn't be happier with the results!</h3>
+							<p class="my-4">"I recently had the pleasure of working with Lucy as my wedding florist, and I couldn't be happier with the results. Her creativity and attention to detail transformed the venue into a floral wonderland. Lucy's passion for her craft truly shines through, and she went above and beyond to make our special day even more magical.</p>
+							<p class="my-4">Every arrangement was exquisite, and the colours she chose perfectly complimented the theme. Lucy's professionalism and warm personality made the entire process enjoyable.</p>
+							<p class="my-4">I highly recommend her to anyone seeking a talented and dedicated florist for their wedding. Thank you Lucy for making our day absolutely unforgettable!"</p>
+						</blockquote>
+						<figcaption class="flex justify-center items-center space-x-3">
+							<div class="space-y-0.5 font-medium dark:text-white text-left">
+								<div>Kat and Josh</div>
+								<div class="text-sm font-light text-gray-500 dark:text-gray-400">September 2023</div>
+							</div>
+						</figcaption>    
+					</figure>
+					<figure class="flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-b border-gray-200 md:p-12 dark:bg-gray-800 dark:border-gray-700">
+						<blockquote class="mx-auto mb-8 max-w-2xl text-gray-500 dark:text-gray-400">
+							<h3 class="text-lg font-semibold text-gray-900 dark:text-white">The flowers on the day were stunning</h3>
+							<p class="my-4">"We used Yorkshire Floral Co for our wedding flowers as we had seen Lucy's work on Instagram and really liked the style of flowers. It was a great alternative to using all fresh flowers, as it was much more economical for the types of designs we wanted, and it also felt better for the environment to rent flowers rather than
+								use fresh and they just be thrown away after. </p>
+							<p class="my-4">Lucy was great from the start, she was super friendly and had great comms, always replying to emails in a timely manner, and she really made us feel at ease. The flowers on the day were stunning, even better than I expected. We had compliments from the guests on how lovely they looked, especially the broken flower arch which became a 
+								photo point for many and really added to how pretty the venue looked. Lucy even helped set up our tables to make sure the florals fit in with our decor and we rented some extra candles from her too. It all went perfectly and we couldn't have been happier with how they all looked on the day. Thank you so much!!"</p>
+						</blockquote>
+						<figcaption class="flex justify-center items-center space-x-3">
+							<div class="space-y-0.5 font-medium dark:text-white text-left">
+								<div>Fabiana and Femi</div>
+								<div class="text-sm font-light text-gray-500 dark:text-gray-400">August 2023</div>
+							</div>
+						</figcaption>    
+					</figure>
+					<figure class="flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-gray-200 md:p-12 dark:bg-gray-800 dark:border-gray-700">
+						<blockquote class="mx-auto mb-8 max-w-2xl text-gray-500 dark:text-gray-400">
+							<h3 class="text-lg font-semibold text-gray-900 dark:text-white">The service was second to none!</h3>
+							<p class="my-4">"Where do I start with writing a review for Yorkshire Floral Co, Lucy was absolutely incredible from start to finish when planning my wedding. After reviewing her previous work, I knew I wanted her to create my bridal flowers, as they always looked so incredible!</p>
+							<p class="my-4">The service that went with the flowers was second to none, nothing was ever too much trouble and Lucy kept me informed every step of the way, having conversations with me to discuss colours and design ideas and generally being a sounding board around general wedding conversations.</p>
+
+							<p class="my-4">Lucy's vision and inspiration was perfect for our day and she decorated our room so beautifully, creating the most gorgeous centrepieces, bridal and bridesmaid bouquets, button holes and the most incredible flower girl crowns! Everyone I have spoken to following the wedding has complimented the flowers ad nobody could believe they were artificial."</p>
+						</blockquote>
+						<figcaption class="flex justify-center items-center space-x-3">
+							<div class="space-y-0.5 font-medium dark:text-white text-left">
+								<div>Lauren and Jamie</div>
+								<div class="text-sm font-light text-gray-500 dark:text-gray-400">August 2023</div>
+							</div>
+						</figcaption>    
+					</figure>
 				</div>
-				<div class="border-t-2 border-grey py-12 px-6 md:border-t-0 md:border-l md:py-16 md:pr-0 md:pl-10 lg:pl-16">
-
-				<blockquote class="mt-6 md:flex md:flex-grow md:flex-col">
-					<div class="relative text-lg font-medium text-black md:flex-grow">
-					<svg class="absolute top-0 left-0 h-8 w-8 -translate-x-3 -translate-y-2 transform text-white" fill="currentColor" viewBox="0 0 32 32">
-						<path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
-					</svg>
-					<p class="relative">Lucy was amazing from the word go. She listened to everything we wanted and made the whole process so much easier, plus her decorations really gave our marquee the perfect finishing touches.</p>
+				<!-- <div class="text-center">
+					<a href="#" class="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Show more...</a> 
+				</div> -->
+		  </section>
+		
+		<section id="contact">
+			<div class="relative isolate bg-white">
+				<div class="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
+				<div class="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
+					<div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
+					<div class="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden bg-gray-100 ring-1 ring-gray-900/10 lg:w-1/2">
+						<svg class="absolute inset-0 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" aria-hidden="true">
+						<defs>
+							<pattern id="83fd4e5a-9d52-42fc-97b6-718e5d7ee527" width="200" height="200" x="100%" y="-1" patternUnits="userSpaceOnUse">
+							<path d="M130 200V.5M.5 .5H200" fill="none" />
+							</pattern>
+						</defs>
+						<rect width="100%" height="100%" stroke-width="0" fill="white" />
+						<svg x="100%" y="-1" class="overflow-visible fill-gray-50">
+							<path d="M-470.5 0h201v201h-201Z" stroke-width="0" />
+						</svg>
+						<rect width="100%" height="100%" stroke-width="0" fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)" />
+						</svg>
 					</div>
-					<footer class="mt-8">
-					<div class="flex items-start">
-						<div class="text-black">
-						<div class="text-base font-medium">Christina & Rob</div>
+					<h2 class="text-3xl font-bold tracking-tight text-gray-900">Get in touch</h2>
+						<dl class="mt-10 space-y-4 text-base leading-7 text-gray-600">
+							<div class="flex gap-x-4">
+								<dt class="flex-none">
+								<span class="sr-only">Facebook</span>
+								<svg class="h-7 w-6 text-gray-400" fill="none" viewBox="0 0 57 57" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+									<g>
+										<path d="M28.2,16.7c-7,0-12.8,5.7-12.8,12.8s5.7,12.8,12.8,12.8S41,36.5,41,29.5S35.2,16.7,28.2,16.7z M28.2,37.7
+											c-4.5,0-8.2-3.7-8.2-8.2s3.7-8.2,8.2-8.2s8.2,3.7,8.2,8.2S32.7,37.7,28.2,37.7z"/>
+										<circle cx="41.5" cy="16.4" r="2.9"/>
+										<path d="M49,8.9c-2.6-2.7-6.3-4.1-10.5-4.1H17.9c-8.7,0-14.5,5.8-14.5,14.5v20.5c0,4.3,1.4,8,4.2,10.7c2.7,2.6,6.3,3.9,10.4,3.9
+											h20.4c4.3,0,7.9-1.4,10.5-3.9c2.7-2.6,4.1-6.3,4.1-10.6V19.3C53,15.1,51.6,11.5,49,8.9z M48.6,39.9c0,3.1-1.1,5.6-2.9,7.3
+											s-4.3,2.6-7.3,2.6H18c-3,0-5.5-0.9-7.3-2.6C8.9,45.4,8,42.9,8,39.8V19.3c0-3,0.9-5.5,2.7-7.3c1.7-1.7,4.3-2.6,7.3-2.6h20.6
+											c3,0,5.5,0.9,7.3,2.7c1.7,1.8,2.7,4.3,2.7,7.2V39.9L48.6,39.9z"/>
+									</g>
+								</svg>
+								</dt>
+								<dd><a href="https://www.instagram.com/theyorkshirefloralco/" class="hover:text-gray-900">@theyorkshirefloralco</a></dd>
+							</div>
+						<div class="flex gap-x-4">
+						<dt class="flex-none">
+							<span class="sr-only">Facebook</span>
+							<svg class="h-7 w-6 text-gray-400" fill="none" viewBox="0 0 57 57" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M40.43,21.739h-7.645v-5.014c0-1.883,1.248-2.322,2.127-2.322c0.877,0,5.395,0,5.395,0V6.125l-7.43-0.029  c-8.248,0-10.125,6.174-10.125,10.125v5.518h-4.77v8.53h4.77c0,10.947,0,24.137,0,24.137h10.033c0,0,0-13.32,0-24.137h6.77  L40.43,21.739z" />
+							</svg>
+						</dt>
+						<dd><a href="https://m.facebook.com/theyorkshirefloralco/" class="hover:text-gray-900">The Yorkshire Floral Co</a></dd>
+						</div>
+						<div class="flex gap-x-4">
+						<dt class="flex-none">
+							<span class="sr-only">Email</span>
+							<svg class="h-7 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+							</svg>
+						</dt>
+						<dd><a class="hover:text-gray-900" href="mailto:theyorkshirefloralco@hotmail.com">theyorkshirefloralco@hotmail.com</a></dd>
+						</div>
+					</dl>
+					</div>
+				</div>
+				<form method="post" action="https://admin.bvswebdesign.co.uk/yorkshireflowers-form.php" class="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48">
+					<div class="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
+					<div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+						<div class="sm:col-span-2">
+						<label for="name" class="block text-sm font-semibold leading-6 text-gray-900">Name</label>
+						<div class="mt-2.5">
+							<input type="text" name="name" id="first-name" autocomplete="name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+						</div>
+						</div>
+						<div class="sm:col-span-2">
+						<label for="email" class="block text-sm font-semibold leading-6 text-gray-900">Email</label>
+						<div class="mt-2.5">
+							<input type="email" name="email" id="email" autocomplete="email" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+						</div>
+						</div>
+						<div class="sm:col-span-2">
+						<label for="phone-number" class="block text-sm font-semibold leading-6 text-gray-900">Phone number</label>
+						<div class="mt-2.5">
+							<input type="tel" name="phone-number" id="phone-number" autocomplete="tel" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+						</div>
+						</div>
+						<div class="sm:col-span-2">
+							<label for="venue" class="block text-sm font-semibold leading-6 text-gray-900">Venue</label>
+							<div class="mt-2.5">
+							<input type="text" name="venue" id="venue" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+							</div>
+						</div>
+						<div class="sm:col-span-2">
+							<label for="budget" class="block text-sm font-semibold leading-6 text-gray-900">Budget</label>
+							<div class="mt-2.5">
+							<input type="text" name="budget" id="budget" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+							</div>
+						</div>
+						<div class="sm:col-span-2">
+							<label for="marketing" class="block text-sm font-semibold leading-6 text-gray-900">How did you hear about me?</label>
+							<div class="mt-2.5">
+							<input type="text" name="marketing" id="marketing" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+							</div>
+						</div>	
+						<div class="sm:col-span-2">
+							<label for="date" class="block text-sm font-semibold leading-6 text-gray-900">Date</label>
+							<div class="mt-2.5">
+							<input type="date" name="date" id="date" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+							</div>
+						</div>
+						<div class="sm:col-span-2">
+						<label for="message" class="block text-sm font-semibold leading-6 text-gray-900">Message</label>
+						<div class="mt-2.5">
+							<textarea name="message" id="message" rows="4" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
+						</div>
 						</div>
 					</div>
-					</footer>
-				</blockquote>
+					<div class="mt-8 flex justify-end">
+						<button type="submit" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get in Touch!</button>
+					</div>
+					</div>
+				</form>
 				</div>
 			</div>
 		</section>
 
-		<!-- Contact -->
-			<section id="contact" class="py-32 flex flex-col items-center justify-center bg-grey-100">
-				<div class="content">
-					<header class="text-center">
-						<h2 class="font-bold text-3xl mb-2">Get in Touch</h2>
-						<p class="text-lg">I'm always happy to take bookings and enquiries for work, simply fill in the form below and I'll be in touch within one working day</p>
-					</header>
-					<div class="box flex items-center justify-center flex-col py-16">
-						<form method="post" action="https://admin.bvswebdesign.co.uk/yorkshireflowers-form.php" class="w-full md:w-9/12 mx-auto">
-							<div class="fields w-9/12 space-y-2 mx-auto">
-								<div class="w-full"><input class="w-full py-2 rounded px-1" type="text" id="name" name="name" placeholder="Name" /></div>
-								<div class="w-full"><input class="w-full py-2 rounded px-1" type="email"  id="email" name="email" placeholder="Email" /></div>
-								<div class="w-full"><input class="w-full py-2 rounded px-1" type="text" id="phone"  name="phone" placeholder="Phone Number" /></div>
-								<div class="w-full"><input class="w-full py-2 rounded px-1" type="date" id="date"  name="date" placeholder="When are you getting married?" /></div>
-								<div class="w-full"><input class="w-full py-2 rounded px-1" type="text" id="venue"  name="venue" placeholder="Which venue have you chosen?" /></div>
-								<div class="w-full"><input class="w-full py-2 rounded px-1" type="text"  id="budget" name="budget" placeholder="Do you have a budget in mind?" /></div>
-								<div class="w-full"><input class="w-full py-2 rounded px-1" type="text" name="marketing" id="marketing" placeholder="How did you hear about me?" /></div>
-								<div class="w-full"><textarea id="message"  class="w-full py-2 rounded px-1" name="message" placeholder="Message" rows="6"></textarea></div>
-								<ul class="actions special">
-								<li><input class="border border-2 border-white px-2 py-4 rounded hover:bg-pink cursor-pointer" name="submit" type="submit" value="Send Message" /></li>
-							</ul>
-							</div>
-
-						</form>
-					</div>
-				</div>
-			</section>
-
 		<!-- Footer -->
-			<footer class="footer flex flex-col md:flex-row justify-between bg-grey-200 py-2 items-center">
-
-				<!-- Icons -->
-					<ul class="icons flex sm:w-3/12 lg:w-1/12 justify-around">
-						<li><a href="https://m.facebook.com/theyorkshirefloralco/" class="icon"><img class="h-8" src="./images/facebook_icon.svg" alt="Facebook logo"></a></li>
-						<li><a href="https://www.instagram.com/theyorkshirefloralco/" class="icon"><img class="h-8" src="./images/instagram_icon.svg" alt="Instagram logo"></a></li>
-					</ul>
-
-				<!-- Menu -->
-					<ul class="menu flex flex-col sm:flex-row text-center mt-5 sm:mt-0 justify-around w-full sm:w-8/12 md:w-full lg:w-4/12">
-						<li>&copy; The Yorkshire Floral Co</li>
-						<li>Design: <a href="https://www.bvswebdesign.co.uk">BVSWebDesign</a></li>
-					</ul>
-
-			</footer>
+		<footer class="footer flex flex-col md:flex-row justify-between bg-grey-200 py-2 items-center">
+			<!-- Menu -->
+				<ul class="menu flex flex-col sm:flex-row text-center mt-5 sm:mt-0 justify-between w-full md:w-full sm:px-6">
+					<li>&copy; The Yorkshire Floral Co <span id="currentYear"></span></li>
+					<li>Design: <a href="https://www.bvswebdesign.co.uk">BVSWebDesign</a></li>
+				</ul>
+		</footer>
 
 			<script>
+				const currentYear = new Date().getFullYear();
+				const currentYearEl = document.getElementById('currentYear');
+				currentYearEl.textContent = currentYear;
+
 				const toggleNav = e => {
 					const mobileNav = document.querySelector('.mobile-nav');
+					console.log('before the return')
 					if(!mobileNav) return;
-
+					console.log('mobile nab exists')
 					mobileNav.classList.toggle('mr-[-100%]');
 				}
 
